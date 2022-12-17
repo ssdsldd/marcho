@@ -1,11 +1,13 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .wrapper{
     display: flex;
     flex-direction: column;
+    min-height: 100%;
 }
 
 .header {
@@ -30,18 +32,18 @@
 
     &__item {
         padding: 0 3px 1px;
-        @extend %quicksand-400;
+        @extend %roboto-400;
         border-bottom: 1px solid transparent;
         &:hover{
             border-bottom: 1px solid $accent;
             color: $accent;
-            @extend %quicksand-500;
+            @extend %roboto-700;
         }
 
         &--active{
             border-bottom: 1px solid $accent;
             color: $accent;
-            @extend %quicksand-500;
+            @extend %roboto-700;
         }
     }
 
@@ -70,9 +72,8 @@
 }
 
 .main {
-    flex-grow: 1;
+    flex: 1 1 auto;
 }
-
 
 .footer {
     background-color: $bg;
@@ -205,6 +206,92 @@
         color: #fff;
         text-transform: uppercase;
         box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+    }
+}
+
+.slider {
+    padding-bottom: 74px;
+    background-color: $bg;
+    background-image: url('../images/slider-bg.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    &__container {
+        max-width: 1520px;
+    }
+
+    &__row {
+        padding-top: 70px;
+    }
+
+    &__inner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__item {
+        
+    }
+
+    &__content {
+        padding-left: 165px;
+    }
+
+    &__title {
+        @extend %roboto-700;
+        font-size: 58px;
+        line-height: 68px;
+        color: $title;
+        margin-bottom: 40px;
+        width: 570px;
+    }
+
+    &__text {
+        margin-bottom: 60px;
+        max-width: 470px;
+    }
+
+    &__btn {
+        @extend %btn;
+        padding: 19px 35px;
+    }
+
+    &__img {}
+
+    .slick-dots{
+        margin-top: -74px;
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        li{
+            button{
+                background-color: transparent;
+                font-size: 0;
+                width: 30px;
+                height: 30px;
+                border: 1px solid transparent;
+                border-radius: 50%;
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: 11px;
+                    left: 11px;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    background-color: $default;
+                }
+            }
+            &.slick-active{
+                button{
+                    border-color: $accent;
+                    &::after{
+                        background-color: $accent;
+                    }
+                }
+            }
+        }
     }
 }
 
