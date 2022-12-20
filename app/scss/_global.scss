@@ -12,3 +12,11 @@
     margin: 0 auto;
     padding: 0 15px;
 }
+
+.title {
+    @extend %roboto-700;
+    color: $title;
+    font-size: 48px;
+    line-height: 26px;
+    text-transform: uppercase;
+}
