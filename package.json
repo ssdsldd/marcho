@@ -22,6 +22,7 @@
     "@fancyapps/ui": "^4.0.31",
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.6.1",
+    "rateyo": "^2.3.2",
     "slick-carousel": "^1.8.1"
   }
 }
