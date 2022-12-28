@@ -13,6 +13,10 @@
     padding: 0 15px;
 }
 
+.header--gray{
+    background-color: $bg;
+}
+
 .title {
     @extend %roboto-700;
     color: $title;

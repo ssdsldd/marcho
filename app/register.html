@@ -47,16 +47,45 @@
             <section class="breadcrumbs">
                 <div class="breadcrumbs__wide-container" style="background-image: url(images/top-bg.jpg);">
                     <div class="breadcrumbs__container container">
-                        <h2 class="breadcrumbs__title">LOG IN</h2>
+                        <h2 class="breadcrumbs__title">REGISTER</h2>
                         <ul class="breadcrumbs__list">
                             <li class="breadcrumbs__item">
                                 <a class="breadcrumbs__link" href="#">Home</a>
                             </li>
                             <li class="breadcrumbs__item">
-                                <a class="breadcrumbs__link" href="#">Log in</a>
+                                <a class="breadcrumbs__link" href="#">REGISTER</a>
                             </li>
                         </ul>
                     </div>
+                </div>
+            </section>
+            <section class="login">
+                <div class="login__container container">
+                    <div class="login__links">
+                        <a class="login__link login__link--active" href="#">REGISTER</a>
+                        <a class="login__link" href="#">LOGIN</a>
+                    </div>
+                    <form class="login__form" action="#">
+                        <label class="login__name">
+                            Username or email address*
+                            <input class="login__input" type="text" required>
+                        </label>
+                        <label class="login__password">
+                            Password*
+                            <input class="login__input" type="password" required>
+                        </label>
+                        <p class="login__text">
+                            A password will be sent to your email address.
+                        </p>
+                        <p class="login__text">
+                            Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our privacy policy.
+                        </p>
+                        <label class="login__remember login__remember--reg">
+                            <input class="login__check" type="checkbox">
+                            Agree with Terms & Conditions
+                        </label>
+                        <button class="login__btn">REGISTER</button>
+                    </form>
                 </div>
             </section>
         </main>

@@ -1,4 +1,32 @@
 $(function(){
+
+    $('.shop-content__filter-btn').on('click', function(){
+        $('.shop-content__filter-btn').removeClass('shop-content__filter-view--active');
+        $(this).addClass('shop-content__filter-view--active');
+    });
+
+
+    $('.btn-list').on('click', function(){
+        $('.products-items__item').addClass('products-items__item--list');
+    });
+
+    $('.btn-grid').on('click', function(){
+        $('.products-items__item').removeClass('products-items__item--list');
+    });
+
+    $('.shop-content__filter-sort, .shop-content__filter-show').styler();
+    $(".filter-price__input").ionRangeSlider({
+        type: "double",
+        onStart: function (data){
+            $('.filter-price__from').text(data.from);
+            $('.filter-price__to').text(data.to);
+        },
+        onChange: function (data) {
+            $('.filter-price__from').text(data.from);
+            $('.filter-price__to').text(data.to);
+        },
+    });
+
     $('.slider__row').slick({
         arrows: false,
         dots: true,
@@ -54,3 +82,5 @@ $(function(){
     const deadline = $('.timer__clock').attr('data-timer');
     initializeClock('.timer__clock', deadline);
 });
+
+
