@@ -1952,6 +1952,7 @@
 
     &__row {
         display: flex;
+        justify-content: space-between;
         gap: 30px;
     }
 
@@ -2059,7 +2060,7 @@
     }
 
     &__filters{
-        min-width: 370px;
+        max-width: 370px;
     }
     .filter-seo{
         text-align: center;
@@ -2145,6 +2146,294 @@
     }
 }
 
+.blog-one {
+
+    &__content {}
+
+    &__article {
+        border: 1px solid #ececec;
+        border-top:  none;
+        margin-bottom: 30px;
+    }
+
+    &__inner{
+        padding: 30px;
+    }
+
+    &__img {
+        max-width: 770px;
+        img{
+            width: 100%
+        }
+    }
+
+    &__info {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 25px;
+    }
+
+    &__date,
+    &__comments,
+    &__autor{
+        position: relative;
+        padding-left: 26px;
+        &::before{
+            content: '';
+            left: 0;
+            top: 3px;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+        }
+    }
+    &__date {
+        &::before{
+            background-image: url(../images/blog-page/Calender.svg);
+        }
+    }
+    &__comments {
+        &::before{
+            top: 5px;
+            background-image: url(../images/blog-page/Comment.svg);
+        }
+    }
+
+    &__autor {
+        &::before{
+            background-image: url(../images/blog-page/User.svg);
+        }
+    }
+
+    &__text {
+        h6{
+            @extend %roboto-500;
+            font-size: 22px;
+            line-height: 1.2;
+            color: $title;
+            margin-bottom: 20px;
+        }
+
+        blockquote{
+            @extend %roboto-400;
+            font-size: 22px;
+            color: $title;
+            background-color: $bg;
+            padding: 40px;
+            border-left: 3px solid $accent;
+            margin: 35px 0;
+        }
+        p{
+            &:not(:last-child){
+                margin-bottom: 35px;
+            }
+           
+        }
+    }
+
+    &__text-img {
+        float: left;
+        margin-right: 30px;
+        max-width: 340px;
+        height: 274px;
+        object-fit: cover;
+    }
+    
+    &__tags{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+    &__tag{
+        span{
+            color: $title;
+            margin-right: 5px;
+        }
+    }
+    &__share{
+        span{
+            color: $title;
+            margin-right: 5px;
+        }
+        a{
+            vertical-align: middle;
+            &:not(:last-child){
+                margin-right: 10px;
+            }
+            path{
+                fill: $default;
+            }
+            &:hover{
+                path{
+                    fill: $accent;
+                }
+            }
+        }
+    }
+    &__creator{
+        display: flex;
+        gap: 30px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid #ececec;
+        margin-bottom: 40px;
+    }
+    &__creator-img{
+        width: 140px;
+        height: 140px;
+    }
+    &__creator-title{
+        @extend %roboto-500;
+        font-size: 22px;
+        color: $title;
+        margin-bottom: 25px;
+    }
+    &__feedback{
+        padding-bottom: 40px;
+        border-bottom: 1px solid #ececec;
+        margin-bottom: 40px;
+    }
+    &__feedback-title{
+        @extend %roboto-700;
+        font-size: 24px;
+        color: $title;
+        margin-bottom: 30px;
+    }
+    &__reply-title{
+        @extend %roboto-700;
+        font-size: 24px;
+        color: $title;
+        margin-bottom: 30px;
+    }
+    &__reply{
+        input{
+            max-width: 370px;
+        }
+        textarea{
+            height: 220px;
+        }
+    }
+}
+
+.map {
+    padding: 120px 0;
+}
+
+.contact {
+    padding-bottom: 120px;
+    &__row {
+        display: flex;
+        gap: 40px;
+    }
+
+    &__content {
+        max-width: 370px;
+    }
+
+    &__title {
+        @extend %roboto-700;
+        font-size: 48px;
+        line-height: 58px;
+        color: $title;
+        margin-bottom: 25px;
+    }
+
+    &__text {
+        margin-bottom: 60px;
+    }
+
+    &__info {
+        color: $title;
+        max-width: 300px;
+    }
+
+    &__mobile,&__address,&__mails {
+        padding-left: 80px;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: -5px;
+            width: 60px;
+            height: 60px;
+            background-color: #ffffff;
+            box-shadow: 0px 5px 20px 0px rgba(146,146,146,0.3);
+        }
+    }
+    &__mobile,&__address,&__mails {
+        &::after{
+            content: '';
+            position: absolute;
+            left: 21px;
+            top: 13px;
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__mobile{
+        margin-bottom: 60px;
+        a{
+            display: block;
+        }
+        &::after{
+            background-image: url(../images/contact/phone_icon.svg);
+        }
+    }
+    &__address {
+        margin-bottom: 60px;
+        &::after{
+            background-image: url(../images/contact/1.svg);
+        }
+    }
+
+    &__mails {
+        &::after{
+            background-image: url(../images/contact/Shape1.svg);
+        }
+    }
+
+    &__form {
+        width: 770px;
+        padding: 60px 40px;
+        background-color: #ffffff;
+        box-shadow: 0px 10px 40px 0px rgba(172,172,172,0.3);
+        input{
+            background-color: $bg;
+            padding: 23px;
+            width: 100%;
+        }
+        textarea{
+            background-color: $bg;
+            padding: 23px;
+            width: 100%;
+            height: 200px;
+            margin: 30px 0;
+            resize: none;
+        }
+    }
+
+    &__form-title {
+        @extend %roboto-700;
+        font-size: 22px;
+        color: $title;
+        margin-bottom: 30px;
+    }
+
+    &__box {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 30px;
+        input{
+            max-width: 330px;
+        }
+    }
+
+    &__btn {
+        @extend %btn;
+    }
+}
+
 
 @import 'media';
-  
